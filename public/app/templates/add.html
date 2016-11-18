@@ -1,0 +1,89 @@
+<div ng-transclude></div>
+<form class="container add-container" name="add_form">
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right">Название</div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		<div class="col-sm-7 col-md-7 col-lg-7">
+			<input type="text" class="form-control" ng-model="item.name" name="name"
+						 ng-class="{'incorrect-input':add_form.name.$invalid && add_form.name.$dirty}"
+						 required>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right">Описание</div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		<div class="col-sm-7 col-md-7 col-lg-7">
+			<textarea type="text" class="form-control" ng-model="item.description" name="description"
+								ng-class="{'incorrect-input':add_form.description.$invalid && add_form.description.$dirty}"
+								required>
+			</textarea>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right">Дата</div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		<div class="col-sm-7 col-md-7 col-lg-7">
+			<input type="date" class="form-control" ng-model="item.date" name="date">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right">Продолжительность</div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		<div class="col-sm-7 col-md-7 col-lg-7">
+			<div class="row">
+				<div class="form-group col-md-3">
+					<input class="form-control" type="text" ng-model="item.duration" name="duration">
+				</div>
+				<span class="col-md-3" ng-show="item.duration">{{item.duration | durationFilter}}</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right">Список авторов</div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+
+		<div class="col-sm-7 col-md-7 col-lg-7">
+			<div class="row">
+
+				<div class="col-sm-5 col-md-5 col-lg-5 form-group text-left authors">
+					<ul ng-repeat="author in item.authors" class="list-group">
+						<li class="list-group-item" ng-model="author">{{author}}</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-1 col-md-1 col-lg-1 text-center">
+					<div class="row"></div>
+					<div class="row"></div>
+					<div class="row"></div>
+					<div class="row">
+						<button type="button" class="btn btn-secondary glyphicon glyphicon-chevron-left"></button>
+					</div>
+					<div class="row">
+						<button type="button" class="btn btn-secondary glyphicon glyphicon-chevron-right"></button>
+					</div>
+				</div>
+
+				<div class="col-sm-5 col-md-5 col-lg-5 form-group text-left authors">
+					<ul ng-repeat="author in item.authors" class="list-group">
+						<li class="list-group-item">{{author}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-sm-4 col-md-4 col-lg-4 text-right"></div>
+		<div class="col-sm-1 col-md-1 col-lg-1"></div>
+		<div class="row">
+			<button  ng-click ="save()" type="button" class="btn btn-default col-sm-2 col-md-2 col-lg-2">Сохранить</button>
+			<span class="col-sm-1 col-md-1 col-lg-1"></span>
+			<button type="button" ng-click="cancel()" class="btn btn-default col-sm-2 col-md-2 col-lg-2">Отменить</button>
+		</div>
+	</div>
+
+</form>

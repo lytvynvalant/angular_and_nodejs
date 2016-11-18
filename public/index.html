@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My AngularJS App</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="modules/login.css">
+	<link rel="stylesheet" href="app/app.css">
+</head>
+
+<body  ng-app="myApp">
+	<div ng-include="'/app/templates/main.html'">
+</div>
+<!--for angular-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+
+
+
+<script src="app/app.js"></script>
+
+<!--modules-->
+<script src="modules/login.js"></script>
+
+</body>
+</html>

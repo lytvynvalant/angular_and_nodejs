@@ -1,0 +1,51 @@
+<div class="container login-container">
+	<!--<form name="LoginForm" action="post">-->
+	<form name="LoginForm">
+		<div class="row">
+			<div class="col-sm-3 col-md-3 col-lg-3"></div>
+
+			<div class="col-sm-6 col-md-6 col-lg-6">
+				<div class="row">
+					<span class="col-sm-2 col-md-2 col-lg-2"></span>
+					<span class="col-sm-8 col-md-8 col-lg-8 text-center">
+						<nav ng-class="{navbar: errorResult}" class="navbar-default">
+							{{errorResult}}
+						</nav>
+					</span>
+				</div>
+
+				<div class="row">
+					<span class="col-sm-2 col-md-2 col-lg-2">Логин</span>
+					<span class="col-sm-8 col-md-8 col-lg-8">
+						<input type="text" class="form-control" ng-model="login" ng-pattern="/^[a-zA-Z]+$/"
+									 name="login"
+									 ng-class="{'incorrect-input':LoginForm.login.$invalid && LoginForm.login.$dirty}" required>
+					</span>
+					<span ng-show="LoginForm.login.$invalid && LoginForm.login.$dirty" class="col-sm-2 col-md-2 col-lg-2">This email format is invalid!</span><br>
+				</div>
+
+				<div class="row">
+					<span class="col-sm-2 col-md-2 col-lg-2">Пароль</span>
+					<span class="col-sm-8 col-md-8 col-lg-8">
+					<input type="password" class="form-control password" ng-model="password" name="password"
+								 ng-class="{'incorrect-input':LoginForm.password.$invalid && LoginForm.password.$dirty}" required>
+					</span>
+					<span
+						ng-show="LoginForm.password.$invalid && LoginForm.password.$dirty">This email format is invalid!</span><br>
+				</div>
+
+				<div class="row">
+					<span class="col-sm-2 col-md-2 col-lg-2"></span>
+				<span class="col-sm-8 col-md-8 col-lg-8">
+					<button class="btn btn-default " ng-click="Auth(LoginForm.password)">Войти</button>
+				</span>
+				</div>
+			</div>
+
+			<div class="col-sm-3 col-md-3 col-lg-3"></div>
+		</div>
+	</form>
+
+</div>
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My AngularJS App</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="/app/app.css">
+</head>
+<body>
+<div class="videocatalog-wrapper container">
+
+
+	<div class="row">
+		<nav class="navbar navbar-default">
+			<span class="navbar-brand col-lg-1 col-md-1"></span>
+			<span class="navbar-brand col-lg-10 col-md-10"></span>
+			<a class="navbar-brand  col-lg-1 col-md-1" href="#/login">Login</a>
+		</nav>
+		<div ui-view></div>
+	</div>
+
+</div>
+
+
+<!--for angular-->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+
+<!--Main js-->
+<script src="/app/app.js"></script>
+
+
+<!--pages-->
+<script src="/app/pages/login/login.js"></script>
+<script src="/app/pages/courses/course.js"></script>
+<script src="/app/pages/add/add.js"></script>
+<script src="/app/pages/add/add.js"></script>
+<script src="/app/pages/edit/edit.js"></script>
+
+</body>
+</html>

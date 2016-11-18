@@ -1,0 +1,54 @@
+/* app css stylesheet */
+
+
+.incorrect-input{
+    border:2px solid red;
+}
+/*COURSES*/
+.courses-container .navbar-left {
+    padding: 0;
+}
+
+.courses-container .courses-container-header {
+    padding-bottom: 15px;
+}
+
+/*course-item*/
+.courses-container .courses-item-container {
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.courses-container .courses-item-container {
+    padding-top: 20px;
+    border: 1px solid #E4D6D6;
+}
+
+.courses-container .courses-item-container .btn {
+    margin-bottom: 10px;
+}
+
+.courses-container .courses-item-container .courses-item-title {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.courses-container .courses-item-container .courses-item-date {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/*ADD*/
+.add-container {
+}
+
+.add-container .row {
+    padding-bottom: 15px;
+}
+
+.add-container .authors {
+    border: 1px solid rgba(113, 110, 110, 0.28);;
+    padding: 20px;
+    min-height: 200px;
+    overflow-y: scroll;
+}
